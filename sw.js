@@ -1,7 +1,6 @@
 const STATIC_CACHE = 'static'
 
 const APP_SHELL = [
-  '/',
   'index.html',
   'contacto.html',
   'nosotros.html',
