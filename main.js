@@ -8,7 +8,7 @@ if (navigator.serviceWorker) {
 }
 */
 
-if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
     .then(function(registration) {
         console.log('Service Worker registrado con éxito:', registration);
