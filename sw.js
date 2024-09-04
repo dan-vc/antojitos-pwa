@@ -40,3 +40,16 @@ self.addEventListener('fetch', e => {
       .then(res => res)
   )
 })
+
+// Push Notification
+self.addEventListener('push', event => {
+    let options = {
+        body: event.data.text(),
+        icon: 'img/logo.png',
+        badge: 'img/royal.jpg'
+    };
+
+    event.waitUntil(
+        self.registration.showNotification('Notificación Push', options)
+    );
+});
